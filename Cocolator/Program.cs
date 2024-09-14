@@ -31,3 +31,27 @@ else if (sign == '*')
     Console.WriteLine("Для выхода нажмите любую клавишу...");
     Console.ReadKey();
 }
+else if (sign == '/')
+{
+    result = one / two;
+    Console.WriteLine("Частное ваших чисел равно " + result);
+    Console.WriteLine("Для выхода нажмите любую клавишу...");
+    Console.ReadKey();
+    if (two == 0)
+    {
+        Console.WriteLine("Ошибка. Делитель не может быть равным нулю.");
+        Console.WriteLine("Для выхода нажмите любую клавишу...");
+        Console.ReadKey();
+
+        result = one / two;
+        Console.WriteLine("Частное ваших чисел равна " + result);
+        Console.WriteLine("Для выхода нажмите любую клавишу...");
+        Console.ReadKey();
+    }
+    else
+    {
+        Console.WriteLine("Ошибка. Вы ввели неверный знак.");
+        Console.ReadKey();
+    }
+
+}
