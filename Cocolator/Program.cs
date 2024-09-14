@@ -24,3 +24,10 @@ else if (sign == '-')
     Console.WriteLine("Для выхода нажмите любую клавишу...");
     Console.ReadKey();
 }
+else if (sign == '*')
+{
+    result = one * two;
+    Console.WriteLine("Произведение ваших чисел равно " + result);
+    Console.WriteLine("Для выхода нажмите любую клавишу...");
+    Console.ReadKey();
+}
