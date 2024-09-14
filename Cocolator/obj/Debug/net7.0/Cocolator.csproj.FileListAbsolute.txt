@@ -1,0 +1,14 @@
+C:\Users\student\source\repos\Cocolator\bin\Debug\net7.0\Cocolator.exe
+C:\Users\student\source\repos\Cocolator\bin\Debug\net7.0\Cocolator.deps.json
+C:\Users\student\source\repos\Cocolator\bin\Debug\net7.0\Cocolator.runtimeconfig.json
+C:\Users\student\source\repos\Cocolator\bin\Debug\net7.0\Cocolator.dll
+C:\Users\student\source\repos\Cocolator\bin\Debug\net7.0\Cocolator.pdb
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.AssemblyInfoInputs.cache
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.AssemblyInfo.cs
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.csproj.CoreCompileInputs.cache
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.dll
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\refint\Cocolator.dll
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.pdb
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\Cocolator.genruntimeconfig.cache
+C:\Users\student\source\repos\Cocolator\obj\Debug\net7.0\ref\Cocolator.dll
