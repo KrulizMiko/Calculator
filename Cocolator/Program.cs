@@ -1,13 +1,31 @@
-﻿float one, two, result;
-char sign;
+﻿using System;
 
-Console.WriteLine("Добро пожаловать в калькулятор. Вам нелбходимо ввести первое число, затем знак действия(+,-,*,/), которое хотите совершить и второе число.");
+class Calculator
+{
+    static void Main(string[] args)
+    {
+        float one, two, result;
+        char sign;
 
-Console.Write("Введите первое число A:  ");
-one = Convert.ToSingle(Console.ReadLine());
-Console.Write("Введите знак действия : ");
-sign = Convert.ToChar(Console.ReadLine());
-Console.Write("Введите Второе число B: ");
-two = Convert.ToSingle(Console.ReadLine());
+        Console.WriteLine("Добро пожаловать в калькулятор.");
+
+        while (true)
+        {
+            Console.WriteLine("Введите первое число:");
+            one = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Введите знак действия (+, -, *, /):");
+            sign = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число:");
+            two = Convert.ToSingle(Console.ReadLine());
 
 
+
+
+
+
+        }
+
+    }
+}
