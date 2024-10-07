@@ -1,33 +1,53 @@
-﻿float one, two, result;
-char sign;
+﻿using System;
 
-Console.WriteLine("Добро пожаловать в калькулятор. Вам нелбходимо ввести первое число, затем знак действия(+,-,*,/), которое хотите совершить и второе число.");
+class Calculator
+{
+    static void Main(string[] args)
+    {
+        float one, two, result;
+        char sign;
 
-Console.Write("Введите первое число: ");
-one = Convert.ToSingle(Console.ReadLine());
-Console.Write("Введите знак действия : ");
-sign = Convert.ToChar(Console.ReadLine());
-Console.Write("Введите Второе число: ");
-two = Convert.ToSingle(Console.ReadLine());
+        Console.WriteLine("Добро пожаловать в калькулятор.");
 
-if (sign == '+')
-{
-    result = one + two;
-    Console.WriteLine("Сумма ваших чисел равна " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
-}
-else if (sign == '-')
-{
-    result = one - two;
-    Console.WriteLine("Разность ваших чисел равна " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
-}
-else if (sign == '*')
-{
-    result = one * two;
-    Console.WriteLine("Произведение ваших чисел равно " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
+        while (true)
+        {
+            Console.WriteLine("Введите первое число:");
+            one = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Введите знак действия (-, *):");
+            sign = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число:");
+            two = Convert.ToSingle(Console.ReadLine());
+
+            switch (sign)
+            {
+               
+                case '-':
+                    result = one - two;
+                    Console.WriteLine("Разность ваших чисел равна " + result);
+                    break;
+                case '*':
+                    result = one * two;
+                    Console.WriteLine("Произведение ваших чисел равно " + result);
+                    break;
+
+
+
+                default:
+                    Console.WriteLine("Ошибка. Вы ввели неверный знак.");
+                    break;
+            }
+
+            Console.WriteLine("Хотите сделать еще один расчет? (y/n)");
+            string answer = Console.ReadLine();
+
+            if (answer.ToLower() != "y")
+            {
+                break;
+            }
+        }
+
+        Console.WriteLine("До свидания!");
+    }
 }
