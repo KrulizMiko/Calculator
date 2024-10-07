@@ -1,57 +1,65 @@
-﻿float one, two, result;
-char sign;
+﻿using System;
 
-Console.WriteLine("Добро пожаловать в калькулятор. Вам нелбходимо ввести первое число, затем знак действия(+,-,*,/), которое хотите совершить и второе число.");
-
-Console.Write("Введите первое число: ");
-one = Convert.ToSingle(Console.ReadLine());
-Console.Write("Введите знак действия : ");
-sign = Convert.ToChar(Console.ReadLine());
-Console.Write("Введите Второе число: ");
-two = Convert.ToSingle(Console.ReadLine());
-
-if (sign == '+')
+class Calculator
 {
-    result = one + two;
-    Console.WriteLine("Сумма ваших чисел равна " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
-}
-else if (sign == '-')
-{
-    result = one - two;
-    Console.WriteLine("Разность ваших чисел равна " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
-}
-else if (sign == '*')
-{
-    result = one * two;
-    Console.WriteLine("Произведение ваших чисел равно " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
-}
-else if (sign == '/')
-{
-    result = one / two;
-    Console.WriteLine("Частное ваших чисел равно " + result);
-    Console.WriteLine("Для выхода нажмите любую клавишу...");
-    Console.ReadKey();
-    if (two == 0)
+    static void Main(string[] args)
     {
-        Console.WriteLine("Ошибка. Делитель не может быть равным нулю.");
-        Console.WriteLine("Для выхода нажмите любую клавишу...");
-        Console.ReadKey();
+        float one, two, result;
+        char sign;
 
-        result = one / two;
-        Console.WriteLine("Частное ваших чисел равна " + result);
-        Console.WriteLine("Для выхода нажмите любую клавишу...");
-        Console.ReadKey();
-    }
-    else
-    {
-        Console.WriteLine("Ошибка. Вы ввели неверный знак.");
-        Console.ReadKey();
-    }
+        Console.WriteLine("Добро пожаловать в калькулятор.");
 
+        while (true)
+        {
+            Console.WriteLine("Введите первое число:");
+            one = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Введите знак действия (-, *, /):");
+            sign = Convert.ToChar(Console.ReadLine());
+
+            Console.WriteLine("Введите второе число:");
+            two = Convert.ToSingle(Console.ReadLine());
+
+            switch (sign)
+            {
+               
+                case '-':
+                    result = one - two;
+                    Console.WriteLine("Разность ваших чисел равна " + result);
+                    break;
+                case '*':
+                    result = one * two;
+                    Console.WriteLine("Произведение ваших чисел равно " + result);
+                    break;
+                case '/':
+                    if (two == 0)
+                    {
+                        Console.WriteLine("Ошибка. Делитель не может быть равным нулю.");
+                    }
+                    else
+                    {
+                        result = one / two;
+                        Console.WriteLine("Частное ваших чисел равно " + result);
+                    }
+                    break;
+
+
+
+
+                default:
+                    Console.WriteLine("Ошибка. Вы ввели неверный знак.");
+                    break;
+            }
+
+            Console.WriteLine("Хотите сделать еще один расчет? (y/n)");
+            string answer = Console.ReadLine();
+
+            if (answer.ToLower() != "y")
+            {
+                break;
+            }
+        }
+
+        Console.WriteLine("До свидания!");
+    }
 }
